@@ -1,0 +1,527 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="testzalo" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="testzalo_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:p="http://schemas.uipath.com/workflow/activities/python" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=Studio.Generated.TypedDataRow3" xmlns:sd1="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:uga="clr-namespace:UiPath.GSuite.Activities;assembly=UiPath.GSuite.Activities" xmlns:ugade="clr-namespace:UiPath.GSuite.Activities.Drive.Enums;assembly=UiPath.GSuite.Activities" xmlns:ugam="clr-namespace:UiPath.GSuite.Activities.Models;assembly=UiPath.GSuite.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:usau="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.GSuite.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.GSuite.Activities.Sheets.Enums</x:String>
+      <x:String>UiPath.GSuite.Activities.Models</x:String>
+      <x:String>UiPath.GSuite.Sheets.Enums</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.GSuite.Sheets.Models</x:String>
+      <x:String>UiPath.GSuite.Activities.Drive.Enums</x:String>
+      <x:String>UiPath.Shared.Activities.Utils</x:String>
+      <x:String>UiPath.GSuite.Drive.Models</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.GSuite.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Shared.Activities.ConnectionService.Contracts</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Services.RuntimeAnalyze</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>UiPath.UIAutomationNext</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+      <x:String>Microsoft</x:String>
+      <x:String>Microsoft.Win32.SafeHandles</x:String>
+      <x:String>System.Numerics</x:String>
+      <x:String>System.Net</x:String>
+      <x:String>System.Globalization</x:String>
+      <x:String>System.Configuration.Assemblies</x:String>
+      <x:String>System.CodeDom.Compiler</x:String>
+      <x:String>System.Buffers</x:String>
+      <x:String>System.Buffers.Text</x:String>
+      <x:String>System.Buffers.Binary</x:String>
+      <x:String>System.Threading</x:String>
+      <x:String>System.Threading.Tasks</x:String>
+      <x:String>System.Threading.Tasks.Sources</x:String>
+      <x:String>System.Text</x:String>
+      <x:String>System.Text.Unicode</x:String>
+      <x:String>System.Security.Principal</x:String>
+      <x:String>System.Security.Permissions</x:String>
+      <x:String>System.Security.Cryptography</x:String>
+      <x:String>System.Runtime</x:String>
+      <x:String>System.Runtime.Remoting</x:String>
+      <x:String>System.Runtime.ExceptionServices</x:String>
+      <x:String>System.Runtime.ConstrainedExecution</x:String>
+      <x:String>System.Runtime.Versioning</x:String>
+      <x:String>System.Runtime.Loader</x:String>
+      <x:String>System.Runtime.Intrinsics</x:String>
+      <x:String>System.Runtime.Intrinsics.Wasm</x:String>
+      <x:String>System.Runtime.Intrinsics.Arm</x:String>
+      <x:String>System.Runtime.Intrinsics.X86</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Runtime.InteropServices.ObjectiveC</x:String>
+      <x:String>System.Runtime.InteropServices.Marshalling</x:String>
+      <x:String>System.Runtime.InteropServices.ComTypes</x:String>
+      <x:String>System.Runtime.CompilerServices</x:String>
+      <x:String>System.Resources</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Reflection.Metadata</x:String>
+      <x:String>System.Reflection.Emit</x:String>
+      <x:String>System.IO.Enumeration</x:String>
+      <x:String>System.Diagnostics.SymbolStore</x:String>
+      <x:String>System.Diagnostics.Contracts</x:String>
+      <x:String>System.Diagnostics.CodeAnalysis</x:String>
+      <x:String>System.Diagnostics.Tracing</x:String>
+      <x:String>System.Collections.Concurrent</x:String>
+      <x:String>Internal</x:String>
+      <x:String>System.CodeDom</x:String>
+      <x:String>Microsoft.CSharp</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Linq.Expressions.Interpreter</x:String>
+      <x:String>System.Dynamic</x:String>
+      <x:String>UiPath.Workflow.Runtime</x:String>
+      <x:String>System.Activities.Tracking</x:String>
+      <x:String>System.Activities.Statements.Tracking</x:String>
+      <x:String>System.Activities.Runtime</x:String>
+      <x:String>System.Activities.Runtime.DurableInstancing</x:String>
+      <x:String>System.Activities.Runtime.Collections</x:String>
+      <x:String>System.Activities.ParallelTracking</x:String>
+      <x:String>System.Activities.Hosting</x:String>
+      <x:String>System.Activities.Persistence</x:String>
+      <x:String>System.Activities.DurableInstancing</x:String>
+      <x:String>System.ComponentModel.Design.Serialization</x:String>
+      <x:String>System.Text.RegularExpressions</x:String>
+      <x:String>System.Security.Authentication.ExtendedProtection</x:String>
+      <x:String>System.Timers</x:String>
+      <x:String>System.ComponentModel.Design</x:String>
+      <x:String>System.Xml.Schema</x:String>
+      <x:String>System.Xml.Xsl</x:String>
+      <x:String>System.Xml.Xsl.Runtime</x:String>
+      <x:String>System.Xml.XPath</x:String>
+      <x:String>System.Xml.Resolvers</x:String>
+      <x:String>Microsoft.CodeAnalysis</x:String>
+      <x:String>Microsoft.CodeAnalysis.FlowAnalysis</x:String>
+      <x:String>Microsoft.CodeAnalysis.Text</x:String>
+      <x:String>Microsoft.CodeAnalysis.Diagnostics</x:String>
+      <x:String>Microsoft.CodeAnalysis.Diagnostics.Telemetry</x:String>
+      <x:String>Microsoft.CodeAnalysis.Operations</x:String>
+      <x:String>Microsoft.CodeAnalysis.Emit</x:String>
+      <x:String>Microsoft.CodeAnalysis.VisualBasic</x:String>
+      <x:String>Microsoft.CodeAnalysis.VisualBasic.Syntax</x:String>
+      <x:String>Microsoft.VisualBasic.FileIO</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>UiPath.GSuite.Activities.Enums</x:String>
+      <x:String>UiPath.GSuite.Sheets.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>UiPath.Python.Activities</x:String>
+      <x:String>UiPath.Python</x:String>
+      <x:String>Newtonsoft.Json.Linq</x:String>
+      <x:String>Newtonsoft.Json</x:String>
+      <x:String>System.Collections.Specialized</x:String>
+      <x:String>UiPath.Web.Activities</x:String>
+      <x:String>UiPath.GSuite.Activities.Sheets</x:String>
+      <x:String>UiPath.GSuite.Activities.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Exceptions</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Python.Activities</AssemblyReference>
+      <AssemblyReference>Studio.Generated.TypedDataTable1</AssemblyReference>
+      <AssemblyReference>Studio.Generated.TypedDataTable1</AssemblyReference>
+      <AssemblyReference>Studio.Generated.TypedDataTable2</AssemblyReference>
+      <AssemblyReference>Studio.Generated.TypedDataTable2</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.Watcher</AssemblyReference>
+      <AssemblyReference>System.IO.Packaging</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
+      <AssemblyReference>System.Linq.Async.Queryable</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualStudio.Validation</AssemblyReference>
+      <AssemblyReference>System.IO.Pipes</AssemblyReference>
+      <AssemblyReference>System.Security.Cryptography</AssemblyReference>
+      <AssemblyReference>System.Security.Principal.Windows</AssemblyReference>
+      <AssemblyReference>System.Diagnostics.Process</AssemblyReference>
+      <AssemblyReference>System.IO.MemoryMappedFiles</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Registry</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>System.Net.Primitives</AssemblyReference>
+      <AssemblyReference>System.Net.HttpListener</AssemblyReference>
+      <AssemblyReference>System.Net.WebProxy</AssemblyReference>
+      <AssemblyReference>System.Net.NameResolution</AssemblyReference>
+      <AssemblyReference>System.Net.WebClient</AssemblyReference>
+      <AssemblyReference>System.Net.Requests</AssemblyReference>
+      <AssemblyReference>System.Net.ServicePoint</AssemblyReference>
+      <AssemblyReference>System.Net.WebHeaderCollection</AssemblyReference>
+      <AssemblyReference>System.CodeDom</AssemblyReference>
+      <AssemblyReference>System.Threading.AccessControl</AssemblyReference>
+      <AssemblyReference>System.Threading</AssemblyReference>
+      <AssemblyReference>UiPath.Vision.Core</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Core</AssemblyReference>
+      <AssemblyReference>System.Threading.Tasks.Parallel</AssemblyReference>
+      <AssemblyReference>System.Text.Encoding.CodePages</AssemblyReference>
+      <AssemblyReference>System.Text.Encodings.Web</AssemblyReference>
+      <AssemblyReference>System.Security.Claims</AssemblyReference>
+      <AssemblyReference>System.Security.Cryptography.Pkcs</AssemblyReference>
+      <AssemblyReference>System.Security.Cryptography.ProtectedData</AssemblyReference>
+      <AssemblyReference>System.Windows.Forms.Design</AssemblyReference>
+      <AssemblyReference>System.Runtime.CompilerServices.VisualC</AssemblyReference>
+      <AssemblyReference>System.Windows.Forms</AssemblyReference>
+      <AssemblyReference>System.Resources.Writer</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.MetadataLoadContext</AssemblyReference>
+      <AssemblyReference>Microsoft.PowerShell.Commands.Diagnostics</AssemblyReference>
+      <AssemblyReference>System.Diagnostics.FileVersionInfo</AssemblyReference>
+      <AssemblyReference>System.Diagnostics.DiagnosticSource</AssemblyReference>
+      <AssemblyReference>System.Diagnostics.TraceSource</AssemblyReference>
+      <AssemblyReference>System.Diagnostics.EventLog</AssemblyReference>
+      <AssemblyReference>System.Diagnostics.PerformanceCounter</AssemblyReference>
+      <AssemblyReference>System.Diagnostics.TextWriterTraceListener</AssemblyReference>
+      <AssemblyReference>System.Diagnostics.StackTrace</AssemblyReference>
+      <AssemblyReference>System.Collections.Concurrent</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.Text.RegularExpressions</AssemblyReference>
+      <AssemblyReference>System.Net.Security</AssemblyReference>
+      <AssemblyReference>System.Private.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xml.XPath.XDocument</AssemblyReference>
+      <AssemblyReference>Microsoft.CodeAnalysis.CSharp</AssemblyReference>
+      <AssemblyReference>Microsoft.CodeAnalysis.VisualBasic</AssemblyReference>
+      <AssemblyReference>Microsoft.CodeAnalysis</AssemblyReference>
+      <AssemblyReference>Microsoft.CodeAnalysis.Features</AssemblyReference>
+      <AssemblyReference>Studio.Generated.TypedDataTable2</AssemblyReference>
+      <AssemblyReference>Studio.Generated.TypedDataRow3</AssemblyReference>
+      <AssemblyReference>Studio.Generated.TypedDataRow3</AssemblyReference>
+      <AssemblyReference>UiPath.Python</AssemblyReference>
+      <AssemblyReference>Studio.Generated.TypedDataRow3</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>Studio.Generated.TypedDataRow3</AssemblyReference>
+      <AssemblyReference>netstandard</AssemblyReference>
+      <AssemblyReference>Newtonsoft.Json</AssemblyReference>
+      <AssemblyReference>System.Collections.Specialized</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>Studio.Generated.TypedDataRow4</AssemblyReference>
+      <AssemblyReference>Studio.Generated.TypedDataRow4</AssemblyReference>
+      <AssemblyReference>Studio.Generated.TypedDataRow5</AssemblyReference>
+      <AssemblyReference>Studio.Generated.TypedDataRow5</AssemblyReference>
+      <AssemblyReference>Studio.Generated.TypedDataRow3</AssemblyReference>
+      <AssemblyReference>Studio.Generated.TypedDataRow3</AssemblyReference>
+      <AssemblyReference>Studio.Generated.TypedDataRow3</AssemblyReference>
+      <AssemblyReference>Studio.Generated.TypedDataRow3</AssemblyReference>
+      <AssemblyReference>Studio.Generated.TypedDataRow3</AssemblyReference>
+      <AssemblyReference>Studio.Generated.TypedDataRow3</AssemblyReference>
+      <AssemblyReference>Studio.Generated.TypedDataRow3</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="testzalo" sap:VirtualizedContainerService.HintSize="1250,3037" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="ui:UiElement" Name="outputElement">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:String x:Key="SourceIdRef">NClick_11</x:String>
+            <x:String x:Key="SourcePropertyName">OutUiElement</x:String>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </Variable>
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="1196,165" sap2010:WorkflowViewState.IdRef="KillProcess_1" ProcessName="Chrome" />
+    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1196,2849" sap2010:WorkflowViewState.IdRef="Sequence_2">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <uga:ForEachRowConnections x:TypeArguments="sd:DataRow3" BrowserItemFriendlyName="{x:Null}" BrowserItemId="{x:Null}" ColumnNames="{x:Array Type=x:String}" ConnectionAccountName="{x:Null}" Length="{x:Null}" RangeMetadata="{x:Null}" Spreadsheet="{x:Null}" TemplateBrowserItemFriendlyName="{x:Null}" TemplateBrowserItemId="{x:Null}" AuthScopesInvalid="False" ConnectionId="d6f41b39-9133-4ec2-8e60-398b57d5ad27" DisplayName="For Each Row in Spreadsheet" EmptyRowAction="Skip" HasHeaders="True" sap:VirtualizedContainerService.HintSize="1162,2766" sap2010:WorkflowViewState.IdRef="ForEachRowConnections`1_1" ItemSelectionMode="UrlOrId" ManualEntrySpreadsheetId="12qu0zJEihV9DOWnqJ80KWuTaBEJZvzgoFEKoRn22NPA" Range="SheetAutoZalo!C1:C2000" ReadAs="Values" UseConnectionService="True" WorkingWithTemplateSpreadsheet="False">
+        <uga:ForEachRowConnections.Body>
+          <ActivityAction x:TypeArguments="sd:DataRow3, x:Int32">
+            <ActivityAction.Argument1>
+              <DelegateInArgument x:TypeArguments="sd:DataRow3" Name="CurrentRow" />
+            </ActivityAction.Argument1>
+            <ActivityAction.Argument2>
+              <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentRowIndex" />
+            </ActivityAction.Argument2>
+            <Sequence sap2010:Annotation.AnnotationText="" DisplayName="Do" sap:VirtualizedContainerService.HintSize="1160,2479" sap2010:WorkflowViewState.IdRef="Sequence_12">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="x:String" Name="cellValue" />
+                <Variable x:TypeArguments="x:String" Name="currentRow__TranslatedText_" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <If Condition="[CurrentRow.Item(0).ToString &lt;&gt; &quot;-1&quot;]" sap:VirtualizedContainerService.HintSize="1126,2388" sap2010:WorkflowViewState.IdRef="If_3">
+                <If.Then>
+                  <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="1124,2151" sap2010:WorkflowViewState.IdRef="Sequence_36">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Chrome Thẻ mới" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="1090,2091" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" ScopeGuid="dc007b70-8862-4ea4-8ba4-84fae5cd8fe5" Version="V2">
+                      <uix:NApplicationCard.AutoGenerationOptions>
+                        <uix:GenerationOptions ExpectedInputs="{x:Null}" Prompt="{x:Null}" Url="{x:Null}">
+                          <uix:GenerationOptions.ExpectedOutputs>
+                            <scg:List x:TypeArguments="x:String" Capacity="4">
+                              <x:Null />
+                            </scg:List>
+                          </uix:GenerationOptions.ExpectedOutputs>
+                        </uix:GenerationOptions>
+                      </uix:NApplicationCard.AutoGenerationOptions>
+                      <uix:NApplicationCard.Body>
+                        <ActivityAction x:TypeArguments="x:Object">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                          </ActivityAction.Argument>
+                          <Sequence DisplayName="" sap:VirtualizedContainerService.HintSize="1056,1851" sap2010:WorkflowViewState.IdRef="Sequence_38">
+                            <Sequence.Variables>
+                              <Variable x:TypeArguments="x:Object" Name="lastMessageText" />
+                              <Variable x:TypeArguments="x:String" Name="a" />
+                              <Variable x:TypeArguments="sd1:DataTable" Name="Contacts" />
+                              <Variable x:TypeArguments="x:Boolean" Name="check" />
+                            </Sequence.Variables>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <uix:NGoToUrl DisplayName="Go To URL" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="1022,114" sap2010:WorkflowViewState.IdRef="NGoToUrl_2" Url="https://chat.zalo.me/" Version="V4" />
+                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click on the search button" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="1022,189" sap2010:WorkflowViewState.IdRef="NClick_51" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="dc007b70-8862-4ea4-8ba4-84fae5cd8fe5">
+                              <uix:NClick.Target>
+                                <uix:TargetAnchorable BrowserURL="chat.zalo.me" CVScreenId="6eedc36d-ee14-4db1-a7e0-5c60fd8493d0" ContentHash="CP6no6ONakOM0J50j1AA1g" CvElementArea="88, 176, 241, 34" CvType="InputBox" DesignTimeRectangle="120, 176, 57, 33" DesignTimeScaleFactor="1" ElementType="Text" FuzzySelectorArgument="&lt;webctrl parentid='contact-search' tag='SPAN' type='' class='flx-al-c fake-textholder truncate fk-normal' aaname='Tìm kiếm' check:innerText='Tìm kiếm' /&gt;" Guid="8d0a2932-1e4f-4645-973d-bf838ace502c" InformativeScreenshot="95090bdda56fe3e9e273c5791fee0135.png" Reference="XWBIm9zqLkCazOk0u4SI8w/dmUHMxG1pEuTgl2mIyWL0w" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Zalo - Nguyễn Đức Hiệp' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                              </uix:NClick.Target>
+                            </uix:NClick>
+                            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Tìm kiếm'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="1022,286" sap2010:WorkflowViewState.IdRef="NTypeInto_7" ScopeIdentifier="dc007b70-8862-4ea4-8ba4-84fae5cd8fe5" Text="[CurrentRow.Item(0).ToString]" Version="V4">
+                              <uix:NTypeInto.Target>
+                                <uix:TargetAnchorable BrowserURL="chat.zalo.me" CVScreenId="cb38674f-bd70-43cf-9d16-f0fa76957bda" ContentHash="atOslZs3kkutoZmN-qDErA" CvElementArea="88, 227, 241, 34" CvType="InputBox" DesignTimeRectangle="88, 229, 240, 32" DesignTimeScaleFactor="1" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl id='contact-search-input' tag='INPUT' type='text' class='' aaname='' /&gt;" Guid="6e26615e-ea04-4ebc-879f-9ef89c037be4" InformativeScreenshot="228a8b7af920c05b907a6d8f7b8eb7f8.png" Reference="XWBIm9zqLkCazOk0u4SI8w/scUKf3ortUirMBf4AqwAYQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Zalo - Nguyễn Đức Hiệp' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                                  <uix:TargetAnchorable.Anchors>
+                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                      <uix:Target CVScreenId="cb38674f-bd70-43cf-9d16-f0fa76957bda" CvElementArea="88, 227, 241, 34" CvType="InputBox" DesignTimeRectangle="120, 228, 57, 33" ElementType="Text" FuzzySelectorArgument="&lt;webctrl parentid='contact-search' tag='SPAN' type='' class='flx-al-c fake-textholder truncate fk-normal' aaname='Tìm kiếm' check:innerText='Tìm kiếm' /&gt;" Guid="06866fdf-bf72-4da3-98cc-d13fea132466" SearchSteps="FuzzySelector, CV" />
+                                    </scg:List>
+                                  </uix:TargetAnchorable.Anchors>
+                                </uix:TargetAnchorable>
+                              </uix:NTypeInto.Target>
+                              <uix:NTypeInto.VerifyOptions>
+                                <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                                  <uix:VerifyExecutionTypeIntoOptions.Retry>
+                                    <InArgument x:TypeArguments="x:Boolean" />
+                                  </uix:VerifyExecutionTypeIntoOptions.Retry>
+                                  <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                    <InArgument x:TypeArguments="x:Double" />
+                                  </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                </uix:VerifyExecutionTypeIntoOptions>
+                              </uix:NTypeInto.VerifyOptions>
+                            </uix:NTypeInto>
+                            <uix:NCheckState DisplayName="Check App State 'chrome.exe Zalo - Lê Đứ…(1)'" sap:VirtualizedContainerService.HintSize="1022,1200" sap2010:WorkflowViewState.IdRef="NCheckState_6" ScopeIdentifier="dc007b70-8862-4ea4-8ba4-84fae5cd8fe5" Timeout="1" Version="V4">
+                              <uix:NCheckState.IfExists>
+                                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,277" sap2010:WorkflowViewState.IdRef="Sequence_42">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="416,165" sap2010:WorkflowViewState.IdRef="KillProcess_4" ProcessName="Chrome" />
+                                  <ui:Continue sap:VirtualizedContainerService.HintSize="416,50" sap2010:WorkflowViewState.IdRef="Continue_5" />
+                                </Sequence>
+                              </uix:NCheckState.IfExists>
+                              <uix:NCheckState.IfNotExists>
+                                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="518,958" sap2010:WorkflowViewState.IdRef="Sequence_43">
+                                  <Sequence.Variables>
+                                    <Variable x:TypeArguments="x:String" Name="text" />
+                                  </Sequence.Variables>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Cloud của tôi(1)'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="484,225" sap2010:WorkflowViewState.IdRef="NClick_57" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="dc007b70-8862-4ea4-8ba4-84fae5cd8fe5" Version="V4">
+                                    <uix:NClick.Target>
+                                      <uix:TargetAnchorable BrowserURL="chat.zalo.me" CVScreenId="abe1e004-881d-4cec-9ba9-d12455fb8ffa" ContentHash="UmOz6CrAckyM8Zp9bu1fyw" DesignTimeRectangle="148, 317, 142, 24" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl tag='DIV-16' /&gt;" Guid="f3b24d72-783c-414a-a377-b64d3d2bb3de" InformativeScreenshot="0983f9becd07599f62ab0e7554ae441a.png" Reference="XWBIm9zqLkCazOk0u4SI8w/eyVpVwyepUylpesA_-4-zg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Zalo - Nguyễn Đức Hiệp' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                                    </uix:NClick.Target>
+                                    <uix:NClick.VerifyOptions>
+                                      <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                        <uix:VerifyExecutionOptions.Retry>
+                                          <InArgument x:TypeArguments="x:Boolean" />
+                                        </uix:VerifyExecutionOptions.Retry>
+                                        <uix:VerifyExecutionOptions.Timeout>
+                                          <InArgument x:TypeArguments="x:Double" />
+                                        </uix:VerifyExecutionOptions.Timeout>
+                                      </uix:VerifyExecutionOptions>
+                                    </uix:NClick.VerifyOptions>
+                                  </uix:NClick>
+                                  <uix:NGetText DisplayName="Get Text 'Hôm quaaCao Thanh-stro…'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="484,189" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="dc007b70-8862-4ea4-8ba4-84fae5cd8fe5" TextString="[text]" Version="V4">
+                                    <uix:NGetText.Target>
+                                      <uix:TargetAnchorable BrowserURL="chat.zalo.me" ContentHash="K9TgD5oZ50OfIBXXqbd3tg" DesignTimeRectangle="417, -5539, 1511, 6495" DesignTimeScaleFactor="1" FuzzySelectorArgument="&lt;webctrl id='messageViewScroll' tag='DIV' type='' class='message-view__scroll__inner --audit-message-spacing preview-ts  fadeInAndOut ' aaname='' /&gt;" Guid="5dec3523-186f-4a52-848d-d9c3189672aa" InformativeScreenshot="8948b8485f05c53e04da7a2f24d5c513.png" Reference="XWBIm9zqLkCazOk0u4SI8w/XSPFLtI6skikIOZ0xaxLLw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Zalo - Lan Guhome' /&gt;" SearchSteps="FuzzySelector" Version="V5" Visibility="Interactive" />
+                                    </uix:NGetText.Target>
+                                  </uix:NGetText>
+                                  <p:PythonScope DisplayName="Python Scope" sap:VirtualizedContainerService.HintSize="484,324" sap2010:WorkflowViewState.IdRef="PythonScope_7" OperationTimeout="10000" Path="C:\Users\Admin\AppData\Local\Programs\Python\Python38" TargetPlatform="x64">
+                                    <p:PythonScope.Body>
+                                      <ActivityAction x:TypeArguments="x:Object">
+                                        <ActivityAction.Argument>
+                                          <DelegateInArgument x:TypeArguments="x:Object" Name="PythonEngineSessionProperty" />
+                                        </ActivityAction.Argument>
+                                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,255" sap2010:WorkflowViewState.IdRef="Sequence_47">
+                                          <Sequence.Variables>
+                                            <Variable x:TypeArguments="p:PythonObject" Name="result" />
+                                          </Sequence.Variables>
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <p:LoadScript Code="{x:Null}" DisplayName="Load Python Script" sap:VirtualizedContainerService.HintSize="416,92" sap2010:WorkflowViewState.IdRef="LoadScript_6" Result="[result]" ScriptFile="loop_test.py" />
+                                          <p:InvokeMethod DisplayName="Private: Invoke Python Method" sap:VirtualizedContainerService.HintSize="416,103" sap2010:WorkflowViewState.IdRef="InvokeMethod_6" Instance="[result]" Name="read_data" Parameters="[{CurrentRow.Item(0).ToString,text}]" Result="[result]" />
+                                        </Sequence>
+                                      </ActivityAction>
+                                    </p:PythonScope.Body>
+                                  </p:PythonScope>
+                                  <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="484,158" sap2010:WorkflowViewState.IdRef="KillProcess_5" ProcessName="Chrome" />
+                                </Sequence>
+                              </uix:NCheckState.IfNotExists>
+                              <uix:NCheckState.Target>
+                                <uix:TargetAnchorable Accuracy="0.7" BrowserURL="chat.zalo.me" ContentHash="K7ytTkT7j0OhJ-x_pdNVIg" DesignTimeRectangle="140, 276, 211, 152" DesignTimeScaleFactor="1" Guid="f9cefa65-944f-417d-aff4-49610120839f" ImageBase64="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" InformativeScreenshot="238e6d2b2226483ed0c84ece5b2c498d.png" Reference="XWBIm9zqLkCazOk0u4SI8w/0jYBFdOWhkyV6c9eCAuO_A" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Zalo - Lê Đức Anh' /&gt;" SearchSteps="Image" TargetType="ImageBased" Version="V5" Visibility="Interactive" />
+                              </uix:NCheckState.Target>
+                            </uix:NCheckState>
+                          </Sequence>
+                        </ActivityAction>
+                      </uix:NApplicationCard.Body>
+                      <uix:NApplicationCard.TargetApp>
+                        <uix:TargetApp Area="-8, -8, 1936, 1048" BrowserType="Chrome" ContentHash="IeuXz80ku0Svns2-tKu4-A" IconBase64="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" InformativeScreenshot="59003d950d03b6c2081efa7451e85026.png" Reference="XWBIm9zqLkCazOk0u4SI8w/Ezt35ufYVEe3RnVjWSwNTg" Selector="&lt;html app='chrome.exe' title='Thẻ mới' /&gt;" Url="chrome://newtab/" Version="V1" />
+                      </uix:NApplicationCard.TargetApp>
+                    </uix:NApplicationCard>
+                  </Sequence>
+                </If.Then>
+                <If.Else>
+                  <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="1124,108" sap2010:WorkflowViewState.IdRef="Sequence_37">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:Continue sap:VirtualizedContainerService.HintSize="1090,48" sap2010:WorkflowViewState.IdRef="Continue_3" />
+                  </Sequence>
+                </If.Else>
+              </If>
+            </Sequence>
+          </ActivityAction>
+        </uga:ForEachRowConnections.Body>
+        <uga:ForEachRowConnections.FileIdBackup>
+          <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" x:Name="__ReferenceID0" StoredValue="UrlOrId">
+            <usau:BackupSlot.BackupValues>
+              <scg:List x:TypeArguments="x:Object" x:Key="Browse" Capacity="2">
+                <x:Null />
+                <x:Null />
+              </scg:List>
+              <scg:List x:TypeArguments="x:Object" x:Key="UrlOrId" Capacity="1">
+                <x:Null />
+              </scg:List>
+            </usau:BackupSlot.BackupValues>
+          </usau:BackupSlot>
+        </uga:ForEachRowConnections.FileIdBackup>
+        <uga:ForEachRowConnections.Item>
+          <ugam:DriveItemArgument Backup="{x:Reference __ReferenceID0}" BrowserId="{x:Null}" ConnectionDescriptor="{x:Null}" ConnectionKey="{x:Null}" Existing="{x:Null}" FriendlyName="{x:Null}" FullPath="{x:Null}" ParentId="{x:Null}" ParentIdFriendlyName="{x:Null}" RelativePath="{x:Null}" IdOrUrl="12qu0zJEihV9DOWnqJ80KWuTaBEJZvzgoFEKoRn22NPA" InputMode="UrlOrId">
+            <ugam:DriveItemArgument.FullPathHint>
+              <InArgument x:TypeArguments="x:String">
+                <Literal x:TypeArguments="x:String" Value="" />
+              </InArgument>
+            </ugam:DriveItemArgument.FullPathHint>
+            <ugam:DriveItemArgument.ParentIdFullPathHint>
+              <InArgument x:TypeArguments="x:String">
+                <Literal x:TypeArguments="x:String" Value="" />
+              </InArgument>
+            </ugam:DriveItemArgument.ParentIdFullPathHint>
+          </ugam:DriveItemArgument>
+        </uga:ForEachRowConnections.Item>
+      </uga:ForEachRowConnections>
+    </Sequence>
+  </Sequence>
+</Activity>
